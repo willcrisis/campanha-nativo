@@ -8,10 +8,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Dia {
-    Integer id;
-    String atributo;
-    String textos;
-    List<Livro> livros;
+    public Integer id;
+    public String atributo;
+    public String textos;
+    public List<Livro> livros;
 
     public Dia(int id, String atributo, String textos, ArrayList<Livro> livros) {
         this.id = id;
@@ -27,5 +27,26 @@ public class Dia {
             livros.add(Livro.fromJson(array.getJSONObject(i)));
         }
         return new Dia(object.getInt("id"), object.getString("atributo"), object.getString("textos"), livros);
+    }
+
+    public String getNome() {
+        switch (id) {
+            case 1:
+                return "Domingo";
+            case 2:
+                return "Segunda-feira";
+            case 3:
+                return "Terça-feira";
+            case 4:
+                return "Quarta-feira";
+            case 5:
+                return "Quinta-feira";
+            case 6:
+                return "Sexta-feira";
+            case 7:
+                return "Sábado";
+            default:
+                return null;
+        }
     }
 }

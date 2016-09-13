@@ -8,9 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Semana {
-    Integer id;
-    String tema;
-    List<Dia> dias;
+    public Integer id;
+    public String tema;
+    public List<Dia> dias;
 
     public Semana(int id, String tema, ArrayList<Dia> dias) {
         this.id = id;
@@ -25,5 +25,14 @@ public class Semana {
             dias.add(Dia.fromJson(array.getJSONObject(i)));
         }
         return new Semana(object.getInt("id"), object.getString("tema"), dias);
+    }
+
+    public Dia findDia(Integer id) {
+        for (Dia dia : dias) {
+            if (id.equals(dia.id)) {
+                return dia;
+            }
+        }
+        return null;
     }
 }

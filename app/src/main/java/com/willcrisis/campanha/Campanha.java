@@ -4,9 +4,6 @@ import android.app.Application;
 
 import com.willcrisis.campanha.service.SemanaService;
 
-import java.util.Calendar;
-import java.util.Date;
-
 /**
  * Created by willian.krause on 12/09/2016.
  */
@@ -17,7 +14,7 @@ public class Campanha extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        semanaService = SemanaService.getInstance();
+        semanaService = SemanaService.getInstance(getAssets());
     }
 
     public SemanaService getSemanaService() {
