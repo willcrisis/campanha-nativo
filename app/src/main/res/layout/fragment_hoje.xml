@@ -1,18 +1,52 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".view.fragment.HojeFragment">
+    >
 
-    <TextView android:id="@+id/hoje_semana"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/semana" />
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        tools:context=".view.fragment.HojeFragment"
+        android:layout_marginTop="16dp">
 
-    <TextView android:id="@+id/hoje_dia"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/dia" />
+        <TextView
+            android:id="@+id/hoje_semana"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/semana" />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/hoje_dia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dia" />
+
+        <TextView
+            android:id="@+id/hoje_atributo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:gravity="center_horizontal"
+            android:text="Large Text"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="56sp" />
+
+        <TextView
+            android:id="@+id/hoje_textos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/dia" />
+
+        <LinearLayout android:id="@+id/hoje_lista"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="8dp"/>
+
+    </LinearLayout>
+</ScrollView>

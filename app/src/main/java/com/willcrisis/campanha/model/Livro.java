@@ -8,8 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Livro {
-    String nome;
-    List<Capitulo> capitulos;
+    public String nome;
+    public List<Capitulo> capitulos;
 
     public Livro(String nome, ArrayList<Capitulo> capitulos) {
         this.nome = nome;

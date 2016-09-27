@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">Campanha</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="semana">Semana</string>
     <string name="dia">Dia</string>
+    <string name="texto_semana">%1$dª Semana: %2$s</string>
+    <string name="texto_capitulo">Capítulo %1$d</string>
+    <string name="texto_versiculo">%1$d %2$s</string>
 </resources>
