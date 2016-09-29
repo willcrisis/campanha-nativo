@@ -1,18 +1,13 @@
 package com.willcrisis.campanha.view.fragment;
 
-
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.willcrisis.campanha.Campanha;
 import com.willcrisis.campanha.R;
@@ -37,8 +32,6 @@ public class HojeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        setHasOptionsMenu(true);
 
         Campanha app = (Campanha) getActivity().getApplication();
         SemanaService service = app.getSemanaService();
@@ -78,21 +71,5 @@ public class HojeFragment extends Fragment {
         campoLista.addView(inflater.inflate(R.layout.row_livro, campoLista, false));
 
         return view;
-    }
-
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        inflater.inflate(R.menu.menu_hoje, menu);
-        super.onCreateOptionsMenu(menu, inflater);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.menu_hoje_compartilhar:
-                Toast.makeText(getActivity(), "Compartilhar", Toast.LENGTH_SHORT).show();
-                break;
-        }
-        return super.onOptionsItemSelected(item);
     }
 }
